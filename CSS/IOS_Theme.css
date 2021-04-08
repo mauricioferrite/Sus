@@ -19,6 +19,15 @@
 }
 
 /* Input With Icon*/
+.input-with-icon .input-with-icon-content-icon {
+  display: block;
+  text-align: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 1.33333333em;
+  line-height: 38px;
+  vertical-align: middle;
+}
+
 .input-with-icon.Valid .input-with-icon-content-icon:after {
   content: "\f00c";
   color: var(--color-success);
@@ -859,6 +868,7 @@
   .wblk_select_address select:hover,
   input[type="text"]:focus,
   input[type="text"]:hover{
+  background-color: white !important;
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -920,8 +930,13 @@
   /* --- Justify --- */
   
   .consent {
-      display: inline-block;
+      display: inline-flex;
       justify-content: center;
+      align-items: center;
+  }
+  
+  .checkConsentContainer {
+        margin-right: 8px;   
   }
   
   .gdpr {
@@ -996,8 +1011,148 @@
 .accordion.banner-accordion .accordion-item-icon{
     margin-left: -64px;
  }
+ 
+ /*IOS Animated label */
+ 
+ .IOS_Stepper_Fields .animated-label {
+    width: fit-content;
+}
+
+.IOS_Stepper_Fields .animated-label-text {
+    display: contents;
+}
+
+   .IOS_Stepper_Fields .animated-label.active .animated-label-text,
+   .IOS_Stepper_Fields .animated-label.active .animated-label-text label,
+   .IOS_Stepper_Fields .Form .animated-label{
+      color: var(--color-black);
+      font-size: var(--font-size-h1);
+      font-weight: var(--font-semi-bold);
+      letter-spacing: 0.51px;
+      -webkit-transition: all 180ms linear;
+      transition: all 180ms linear;
+      padding: 0 0 0 0;
+  }
+    
+    .IOS_Stepper_Fields .animated-label.active .animated-label-text, 
+    .IOS_Stepper_Fields .animated-label.active .animated-label-text label, 
+    .IOS_Stepper_Fields .animated-label.active .animated-label-text .input-with-icon .input-with-icon-input input, 
+    .IOS_Stepper_Fields .animated-label.active .animated-label-text label .input-with-icon .input-with-icon-input input, 
+    .IOS_Stepper_Fields .Form .animated-label {
+              color: var(--color-black);
+          font-size: var(--font-size-h1);
+          font-weight: var(--font-semi-bold);
+          letter-spacing: 0.51px;
+          -webkit-transition: all 180ms linear;
+          transition: all 180ms linear;
+          padding: 0 0 0 0;
+    }
+  
+  .IOS_Stepper_Fields .animated-label.active .animated-label-text .info-label-icon,
+  .IOS_Stepper_Fields .animated-label.active .animated-label-text label .info-label-icon{
+    transform: scale(1.8);
+    -webkit-transition: all 180ms linear;
+    transition: all 180ms linear;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+  .IOS_Stepper_Fields .animated-label .animated-label-text,
+  .IOS_Stepper_Fields .animated-label .animated-label-text label{
+    -webkit-transition: all 180ms linear;
+    transition: all 180ms linear;
+    color: #AAAAAA;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 0.51px;
+}
 
 
+.IOS_Stepper_Fields .animated-label .animated-label-text .info-label-icon,
+.IOS_Stepper_Fields .animated-label .animated-label-text label .info-label-icon{
+    margin-left: 8px;
+    height: 12px;
+    width: auto;
+}
+
+
+.IOS_Stepper_Fields .animated-label .animated-label-text:focus, 
+.IOS_Stepper_Fields .animated-label .animated-label-text label:focus {
+    border: 2px red solid;
+    background-color: blue;
+}
+
+.IOS_Stepper_Fields .animated-label .animated-label-input input, 
+.IOS_Stepper_Fields .animated-label .animated-label-input select, 
+.IOS_Stepper_Fields .animated-label .animated-label-input textarea {
+    background-color: var(--color-background-body);
+    border-radius: unset;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: transparent;
+    border-width: 2px;
+    color: #00AF41;
+    font-size: 20px;
+    font-weight: 500;
+    padding: var(--space-base) var(--space-base);
+    -webkit-transition: all 180ms linear;
+    transition: all 180ms linear;
+    text-align: center;
+    margin-bottom: 10px;
+    transform: scale(1);
+    opacity: 0.7;
+}
+
+
+.IOS_Stepper_Fields .animated-label .animated-label-input input:focus, 
+.IOS_Stepper_Fields .animated-label .animated-label-input select:focus, 
+.IOS_Stepper_Fields .animated-label .animated-label-input textarea:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #80e1c4;
+    border-width: 2px;
+    color: var(--color-black);
+    font-size: 20px;
+    font-weight: 500;
+    background: var(--color-background-body);
+    transform: scale(1.5);
+    opacity: 1;
+    margin-bottom: 10px;
+    z-index: 1;
+    height: 24px;
+}
+
+/*IOS Input W/ Icon*/
+
+.IOS_Stepper_Fields .input-with-icon .input-with-icon-content-icon {
+  display: block;
+  text-align: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 24px;
+  line-height: 32px;
+  vertical-align: middle;
+}
+
+.IOS_Stepper_Fields .input-with-icon.Valid .input-with-icon-content-icon:after {
+  content: "\f00c";
+  color: var(--color-success);
+}
+
+.IOS_Stepper_Fields .input-with-icon.Not_Valid .input-with-icon-content-icon:after {
+  content: "\f00d";
+  color: var(--color-error);
+}
+
+.IOS_Stepper_Fields .input-with-icon.Valid .input-with-icon-content-icon:empty,
+.IOS_Stepper_Fields .input-with-icon.Not_Valid .input-with-icon-content-icon:empty{
+    display: block;   
+}
+/*
+.IOS_Stepper_Fields .button-group {
+    margin-bottom: 24px;
+}*/
   /*******************************************************/
  /*                 RESPONSIVE CSS START                */
 /*******************************************************/
@@ -1075,7 +1230,7 @@
 }
 .phone.portrait .input-with-icon.input-data-text .input-with-icon-input input {
     width: 100%;
-    min-width: 100%; 
+    min-width: 100%;
 }
 
 /* Modal Vehicle Data*/
