@@ -1105,6 +1105,10 @@
     height: auto;
 }
 
+.phone.portrait .final_price {
+    height: auto;
+}
+
 /* Tablet */
 
 
